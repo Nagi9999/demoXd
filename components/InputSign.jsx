@@ -7,6 +7,7 @@ const InputSign = ({ placeholder, secureTextEntry, onInputChange }) => {
       style={style.input}
       placeholder={placeholder}
       secureTextEntry={secureTextEntry}
+      placeholderTextColor={"#afc1c4"}
       onChangeText={(text) => onInputChange(text)}
     />
   );
