@@ -17,7 +17,7 @@ export default function ForgetPass({ navigation }) {
       <StatusBar barStyle={"dark-content"} />
       <Pressable
         onPress={() => {
-          navigation.navigate("SplashScreen");
+          navigation.navigate("SignInScreen");
         }}
       >
         <Ionicons
