@@ -12,6 +12,16 @@ import BtnComponent from "../components/BtnComponent";
 import InputSign from "../components/InputSign";
 
 export default function ForgetPass({ navigation }) {
+
+  const ForgetPassData={
+    ScreenTitle:"Send Email",
+    ScreenName:"SplashScreen",
+    customStyle:style.btnSend,
+    navigation:navigation,
+    backgroundColor:"rgba(0, 214, 216, 1)",
+    color:"#ffffff",
+  
+  }
   return (
     <SafeAreaView style={style.container}>
       <StatusBar barStyle={"dark-content"} />
@@ -31,14 +41,7 @@ export default function ForgetPass({ navigation }) {
 
       <View style={style.emailContainer}>
         <InputSign placeholder="Email" secureTextEntry={false} />
-        <BtnComponent
-          ScreenTitle={"Send Email"}
-          ScreenName={"SplashScreen"}
-          customStyle={style.btnSend}
-          navigation={navigation}
-          backgroundColor={"rgba(0, 214, 216, 1)"}
-          color={"#ffffff"}
-        />
+        <BtnComponent {...ForgetPassData}/>
       </View>
     </SafeAreaView>
   );

@@ -28,6 +28,15 @@ export default function SignInScreen({ navigation }) {
     }
   };
 
+  const SignInData={
+    ScreenTitle:"Sign In & Continue",
+    ScreenName:"SplashScreen",
+    customStyle:style.btnSignIn,
+    navigation:navigation,
+    backgroundColor:btnBackgroundColor,
+    color:btnTextColor,
+  }
+
   return (
     <SafeAreaView style={style.container}>
       <StatusBar barStyle={"dark-content"} />
@@ -79,13 +88,7 @@ export default function SignInScreen({ navigation }) {
         </Pressable>
       </View>
 
-      <BtnComponent
-        ScreenTitle={"Sign In & Continue"}
-        ScreenName={"SplashScreen"}
-        customStyle={style.btnSignIn}
-        navigation={navigation}
-        backgroundColor={btnBackgroundColor}
-        color={btnTextColor}
+      <BtnComponent {...SignInData}
       />
       <Text style={style.txtOr}>OR</Text>
 

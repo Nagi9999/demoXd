@@ -14,6 +14,15 @@ import InputSign from "../components/InputSign";
 export default function SignUpScreen({ navigation }) {
   const [checked, setChecked] = useState(true);
 
+  const SignUpData={
+    
+    ScreenTitle:"Create Account",
+    ScreenName:"SplashScreen",
+    customStyle:style.btnSignUp,
+    navigation:navigation,
+    backgroundColor:"rgba(0, 214, 216, 0.1)",
+    color:"rgba(0, 214, 216, 1)",
+  }
   return (
     <SafeAreaView style={style.container}>
       <StatusBar barStyle={"dark-content"} />
@@ -54,13 +63,7 @@ export default function SignUpScreen({ navigation }) {
         </Text>
       </View>
 
-      <BtnComponent
-        ScreenTitle={"Create Account"}
-        ScreenName={"SplashScreen"}
-        customStyle={style.btnSignUp}
-        navigation={navigation}
-        backgroundColor={"rgba(0, 214, 216, 0.1)"}
-        color={"rgba(0, 214, 216, 1)"}
+      <BtnComponent {...SignUpData}
       />
 
       <View style={style.termContent}>

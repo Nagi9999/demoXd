@@ -11,26 +11,29 @@ import BtnComponent from "../components/BtnComponent";
 const bgImg = require("../assets/bgSplash.png");
 
 export default function SplashScreen({ navigation }) {
+  const SignInData={
+    ScreenTitle:"Sign In",
+    ScreenName:"SignInScreen",
+    customStyle:style.btnSignIn,
+    navigation:navigation,
+    backgroundColor:"#ffffff",
+    color:"rgba(0, 214, 216, 1)",
+  };
+  const SignUpData={
+    ScreenTitle : "Sign Up",
+          ScreenName:"SignUpScreen",
+          customStyle:style.btnSignUp,
+          navigation:navigation,
+          backgroundColor:"#FFEB00",
+          color:"rgba(0, 214, 216, 1)",
+  }
   return (
     <SafeAreaView style={style.container}>
       <StatusBar backgroundColor={"#00D6D8"} barStyle={"light-content"} />
       <ImageBackground source={bgImg} style={style.image}>
-        <BtnComponent
-          ScreenTitle={"Sign In"}
-          ScreenName={"SignInScreen"}
-          customStyle={style.btnSignIn}
-          navigation={navigation}
-          backgroundColor={"#ffffff"}
-          color={"rgba(0, 214, 216, 1)"}
+        <BtnComponent {...SignInData}
         />
-        <BtnComponent
-          ScreenTitle={"Sign Up"}
-          ScreenName={"SignUpScreen"}
-          customStyle={style.btnSignUp}
-          navigation={navigation}
-          backgroundColor={"#FFEB00"}
-          color={"rgba(0, 214, 216, 1)"}
-        />
+        <BtnComponent {...SignUpData} />
       </ImageBackground>
     </SafeAreaView>
   );
